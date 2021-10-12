@@ -1,0 +1,40 @@
+{% extends "layout.html"  %}
+{% block q1 %}
+<form class="row g-3" method="GET" action="/search">
+    <blockquote class="blockquote">Search/Analysis</blockquote>
+    <!키워드 입력---------------->
+    <div class="form-floating">
+        <textarea class="form-control" name="keyword" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Search Keyword</label>
+    </div>
+    <!검색 갯수 입력------------->
+    <div class="form-floating">
+        <textarea class="form-control" name="Pnum" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Product Number</label>
+    </div>
+    <!page 당 크기-------------->
+    <div class="form-floating">
+        <textarea class="form-control" name="Psize" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">PageSize(0~200)</label>
+    </div>
+    
+    <!정렬---------------------->
+    <select class="form-select" name="sortC" aria-label="Default select example">
+        <option selected>Sort</option>
+        <option value="">선택없음</option>
+        <option value="CP">인기도순</option>
+        <option value="A">누적판매순</option>
+        <option value="G">평가높은순</option>
+        <option value="I">후기/리뷰많은순</option>
+        <option value="L">낮은가격순</option>
+        <option value="H">높은가격순</option>
+        <option value="N">최근등록순</option>
+    </select>
+    <!확인----------------------->
+    <button type="submit" value="Submit" class="btn btn-primary mb-3">Confirm</button>
+    <button type="button" href="/" name="clearing" class="btn btn-secondary">Clear</button>
+    
+
+</form>
+{{dd}}
+{% endblock q1%}
